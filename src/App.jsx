@@ -14,7 +14,7 @@ const Settings = () => {
 };
 
 const Friends = () => {
-	return <h2>Мои друзья</h2>;
+	return <h2>My friends</h2>;
 };
 
 
