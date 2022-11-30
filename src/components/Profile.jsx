@@ -1,7 +1,9 @@
 import styles from "./Profile.module.css";
 
 const Profile = (props) => {
-	let user = props.function();
+	let userId = location.pathname.split("/")[2];
+	let user = props.function(userId);
+
 	return (
 		<div className="row">
 			<div className="col-sm-3">
@@ -10,7 +12,7 @@ const Profile = (props) => {
 			<div className="col-sm-9">
 					<h1 style={{backgroundColor: "lightblue"}}>{user.name} {user.lastname}</h1>
 					<h2 className={styles.about}>Рассказ о себе</h2>
-					<p>E-mail: {user.email}</p>
+					<p className={styles.email}>E-mail: {user.email}</p>
 					<p>ID: {user.id}</p>
 					<p className={styles.paragraph}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 						Quae, dolorem unde, aperiam sunt, labore omnis accusantium 
