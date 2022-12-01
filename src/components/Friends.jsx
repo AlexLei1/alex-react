@@ -23,6 +23,7 @@ class Friends extends React.Component{
 	}
 
 	componentDidMount() {
+		// обрабатываем промис
 		this.props.function().then(users => {
 			console.log(users)
 			let usersCount = users.length;
@@ -34,7 +35,7 @@ class Friends extends React.Component{
 			this.setState({userRow: userRow});
 		});
 	}
-
+	// метод класса
 	render() {
 		return (
 			<table className="table table-dark">
